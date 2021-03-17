@@ -28,17 +28,12 @@ const md = new markdownit({
         )
       })
       .join('')
-    html = '<ol>' + html + '</ol>'
+    // 添加复制按钮
+    const button = `<button class="copy ban-clipboard" data-clipboard-action="copy" data-clipboard-target="#copy${codeId}">复制</button>`
     // 添加代码语言
-    html += '<b class="name">' + lang + '</b>'
-    return (
-      `<button class="copy" data-clipboard-action="copy" data-clipboard-target="#copy${codeId}">复制</button>` +
-      `<pre class="hljs" id="copy${codeId}">` +
-      '<code>' +
-      html +
-      '</code>' +
-      '</pre>'
-    )
+    const b = '<b class="name ban-clipboard">' + lang + '</b>'
+    html = `<ol class="hljs" id="copy${codeId}">` + b + button + html + `</ol>`
+    return html
   },
 })
 export default md
