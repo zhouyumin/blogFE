@@ -14,7 +14,7 @@
       v-show="!($route.params.keyword != null)"
       class="pagination"
       background
-      layout="prev, pager, next, sizes, jumper"
+      :layout="layout"
       :total="total"
       :current-page="data.page"
       :page-size="data.size"
@@ -35,6 +35,10 @@ export default {
   props: ['category', 'keyword'],
   data() {
     return {
+      layout:
+        document.body.clientWidth >= 915
+          ? 'prev, pager, next, sizes, jumper'
+          : 'prev, pager, next',
       fullscreenLoading: false,
       total: 100,
       archives: [],

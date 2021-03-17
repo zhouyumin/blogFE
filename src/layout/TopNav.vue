@@ -32,7 +32,7 @@
           <i class="fa fa-fw fa-info-circle"></i><span>关于</span>
         </template>
       </el-menu-item>
-      <el-menu-item @click="search">
+      <el-menu-item @click="search" index="/search">
         <template #title>
           <i class="fa fa-fw fa-search"></i>
           <span>搜索</span>
