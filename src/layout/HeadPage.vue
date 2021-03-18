@@ -19,7 +19,9 @@ export default {
     return {}
   },
   mounted() {
-    paopao()
+    this.$nextTick(() => {
+      paopao()
+    })
   },
   methods: {},
 }
@@ -30,6 +32,8 @@ div {
   user-select: none;
 }
 .gyx {
+  position: relative;
+  z-index: 2;
   width: 100%;
   text-align: center;
   /*flex 布局*/
@@ -44,6 +48,7 @@ div {
 }
 #paopao {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
 }
@@ -52,8 +57,5 @@ div {
   color: white;
   font-size: 1.5rem;
   font-family: '华文行楷', 'STXingkai', 'STXK';
-}
-canvas {
-  width: 100%;
 }
 </style>

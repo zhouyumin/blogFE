@@ -1,9 +1,9 @@
 const paopao = function () {
   let width, height, canvas, ctx, circles
   // Main
-  width = document.getElementById('paopao-container').clientWidth // 调整为自己div的宽度
-  height = document.getElementById('paopao-container').clientHeight // 调整为自己div的高度
   canvas = document.getElementById('paopao') // 这个是canvas标签的id
+  width = document.getElementById('paopao-container').offsetWidth // 调整为自己div的宽度
+  height = document.getElementById('paopao-container').offsetHeight // 调整为自己div的高度
   canvas.width = width
   canvas.height = height
   ctx = canvas.getContext('2d')
