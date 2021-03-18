@@ -99,7 +99,8 @@ export default {
     width: 100px;
     border-radius: 50%;
     :hover {
-      animation: rotate 3s linear infinite;
+      transform: scale(1.1);
+      transition: 0.3s ease;
     }
   }
 }

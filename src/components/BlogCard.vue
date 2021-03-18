@@ -22,9 +22,16 @@
             <span>
               <i class="fa fa-folder-o"></i>
               <span>分类于</span>
-              <span
-                ><a href="#">{{ archive.category }}</a></span
-              >
+              <span>
+                <router-link
+                  :to="{
+                    name: 'category',
+                    params: { category: archive.category },
+                  }"
+                >
+                  {{ archive.category }}
+                </router-link>
+              </span>
             </span>
           </div>
         </div>
