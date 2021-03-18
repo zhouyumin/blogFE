@@ -56,5 +56,5 @@ blockquote {
   border-left: 4px solid #42b983;
 }
 .blog img {
-  width: 100%;
+  max-width: 100%;
 }
