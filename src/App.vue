@@ -70,6 +70,7 @@ export default {
 </script>
 
 <style scoped>
+@import '@/css/base.css';
 .top {
   position: fixed;
   left: 0;

@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style scoped>
 .blog {
   margin: 30px 0;
 }
