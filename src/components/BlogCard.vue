@@ -77,5 +77,8 @@ export default {
 .title a {
   text-decoration: none;
   color: #67c23a;
+  h1 {
+    display: inline-block;
+  }
 }
 </style>
