@@ -36,6 +36,8 @@
           type="datetime"
           placeholder="选择日期时间"
           style="width: 100%"
+          @change="setDate"
+          format="YYYY-MM-DD HH:mm:ss"
         >
         </el-date-picker>
       </el-form-item>
@@ -70,6 +72,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment'
 import {
   addArchive,
   getArchive,
@@ -149,9 +152,7 @@ export default {
                   })
                   .catch(() => {
                     //再写一篇，清空form表单
-                    for (let key in this.form) {
-                      this.form[key] = ''
-                    }
+                    this.$refs.form.resetFields()
                   })
               } else {
                 this.$message.error(res.data.msg)
@@ -195,6 +196,10 @@ export default {
             })
         }
       })
+    },
+    setDate(val) {
+      val = moment(val).format('YYYY-MM-DD HH:mm:ss')
+      this.form.date = val
     },
   },
 }
