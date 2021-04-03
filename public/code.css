@@ -55,6 +55,21 @@ blockquote {
   border-radius: 5px;
   border-left: 4px solid #42b983;
 }
-.blog img {
+.blog .el-card img {
   max-width: 100%;
+}
+
+.blog .el-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.blog .el-card td {
+  background-color: #ebeef5;
+  text-align: center;
+  border: 1px solid;
+}
+
+.blog .el-card th {
+  border: 1px solid;
+  background-color: #409eff;
 }
