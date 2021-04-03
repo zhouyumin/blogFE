@@ -36,4 +36,6 @@ const md = new markdownit({
     return html
   },
 })
+import math from 'markdown-it-mathjax3'
+md.use(math)
 export default md

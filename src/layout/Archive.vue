@@ -46,7 +46,7 @@ export default {
   components: {},
   data() {
     return {
-      total: 100,
+      total: 0,
       data: {
         page: 1,
         size: 20,
