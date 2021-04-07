@@ -1,23 +1,18 @@
 .hljs {
   font-size: 16px;
-  padding: 8px 2px;
+  padding-left: 60px !important;
   border-radius: 5px;
   position: relative;
-}
-.hljs ol {
-  list-style: decimal;
   margin: 0;
-  margin-left: 40px;
-  padding: 0;
 }
-.hljs ol li {
-  list-style: decimal-leading-zero;
+.hljs li {
+  list-style: decimal;
   position: relative;
   padding-left: 10px;
 }
-.hljs ol li .line-num {
+.hljs li .line-num {
   position: absolute;
-  left: -40px;
+  left: -46px;
   top: 0;
   width: 40px;
   height: 100%;
@@ -59,6 +54,10 @@ blockquote {
   max-width: 100%;
 }
 
+.blog .el-card li:not(pre li) {
+  margin: 18px 0;
+}
+
 .blog .el-card table {
   width: 100%;
   border-collapse: collapse;
@@ -70,6 +69,7 @@ blockquote {
 }
 
 .blog .el-card th {
-  border: 1px solid;
+  border: 1px solid #000;
+  color: #fff;
   background-color: #409eff;
 }
